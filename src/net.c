@@ -293,7 +293,7 @@ DWORD DownloadFile(const char* url, const char* file, HWND hProgressDialog)
 	hRequest = HttpOpenRequestA(hConnection, "GET", UrlParts.lpszUrlPath, NULL, NULL, accept_types,
 		INTERNET_FLAG_IGNORE_REDIRECT_TO_HTTP|INTERNET_FLAG_IGNORE_REDIRECT_TO_HTTPS|
 		INTERNET_FLAG_NO_COOKIES|INTERNET_FLAG_NO_UI|INTERNET_FLAG_NO_CACHE_WRITE|INTERNET_FLAG_HYPERLINK|
-		((UrlParts.nScheme==INTERNET_SCHEME_HTTPS)?INTERNET_FLAG_SECURE:0), (DWORD_PTR)NULL);
+		INTERNET_FLAG_IGNORE_CERT_CN_INVALID|INTERNET_FLAG_IGNORE_CERT_DATE_INVALID, (DWORD_PTR)NULL);
 	if (hRequest == NULL) {
 		uprintf("Could not open URL %s: %s\n", url, WinInetErrorString());
 		goto out;
@@ -404,7 +404,7 @@ static DWORD WINAPI CheckForUpdatesThread(LPVOID param)
 {
 	BOOL releases_only, found_new_version = FALSE;
 	int status = 0;
-	const char* server_url = RUFUS_NO_SSL_URL "/";
+	const char* server_url = RUFUS_URL "/";
 	int i, j, k, max_channel, verbose = 0, verpos[4];
 	static const char* archname[] = {"win_x86", "win_x64"};
 	static const char* channel[] = {"release", "beta", "test"};		// release channel
