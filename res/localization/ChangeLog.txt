@@ -1,0 +1,215 @@
+This file lists any change that has been applied to the en-US translation of
+rufus.loc since its original version. Translators are expected to keep their
+translations up to date by monitoring this file on regular basis and applying
+the same changes.
+
+When editing an existing translation, make sure you always follow:
+https://github.com/pbatard/rufus/wiki/Localization#Editing_a_translation
+
+Remember to also update the version number for your translation ('v x.y.z')
+once you have matched all the changes that occurred for the en-US translation.
+
+!!IMPORTANT!! The changes below may NOT contain the full message and only tell
+you WHERE, in the English translation, you should look to find the full message
+content. PLEASE, do not just look at this Changelog when updating your
+translation, but always use the English section of rufus.loc as your base.
+For instance, MSG_114, that was introduced in v1.0.8 is MORE than one line!
+
+o Version 1.0.22 (2017.07.17)
+  - *NEW* MSG_295 "Warning: Unofficial version"
+  - *NEW* MSG_296 "This version of Rufus was NOT produced by its official developer(s).\n\nAre you sure you want to run it?"
+  - *NEW* MSG_297 "Truncated ISO detected"
+  - *NEW* MSG_298 "The ISO file you have selected does not match its declared size: %s of data is missing!\n\nIf you obtained "
+    "this file from the Internet, you should try to download a new copy and verify that the MD5 or SHA checksums match the "
+    "official ones.\n\nNote that you can compute the MD5 or SHA in Rufus by clicking the '#' button."
+  Note: You can test MSG_297/MSG_298 using https://rufus.akeo.ie/testing/arch_trunc.iso (A truncated version of archlinux-2017.07.01-x86_64.iso)
+
+o Version 1.0.21 (2017.01.16)
+  - *NEW* MSG_288 "Missing elevated privileges"
+  - *NEW* MSG_289 "This application can only run with elevated privileges"
+    This message, along with the previous, is just to notify the user when they have
+    managed to run Rufus in non-elevated mode. This shouldn't happen in most case
+    so this is not something that you can easily test.
+  - *NEW* MSG_290 "File Indexing"
+    This is a cheat mode that can be tested with Alt-Q, that is equivalent to the
+    "Allow files on this drive to have contents indexed in addition to file properties"
+    (i.e. file indexing) option one can see when looking at the drive properties. See:
+    https://rufus.akeo.ie/pics/FileIndexing.png
+  - *NEW* MSG_291 "Version selection"
+  - *NEW* MSG_292 "Please select the version of Windows you want to install:"
+    These two messages are used when the user has the possibility to select between
+    multiple versions of Windows in Windows To Go mode. In this case, a prompt like
+    this will appear, using these 2 messages: https://rufus.akeo.ie/pics/Win2GoVersion.png
+    If you have an official Windows ISO, and the platform you run Rufus on supports
+    Windows To Go (Windows 8 or later *ONLY*), you should be able to test this message.
+  - *NEW* MSG_293 "Unsupported Windows version"
+  - *NEW* MSG_294 "This version of Windows is no longer supported by Rufus."
+    These two messages are not used anywhere yet, but may be needed in a future prompt.
+
+o Version 1.0.20 (2016.05.09)
+  - *NEW* MSG_286 "Zeroing drive: %0.1f%% completed"
+    Used when filling a whole drive with zero bytes, to display progress in percent (e.g. "Zeroing drive: 12.3% completed")
+    Can be tested with Alt-Z (CAUTION: THIS WILL COMPLETELY ERASE THE SELECTED DRIVE!!)
+  - *NEW* MSG_287 "Detection of non-USB removable drives"
+    Note, this message is followed by either "enabled"/"disabled" (see MSG_250/251) and is similar to MSG_253
+    The message appears on the status bar and can be tested with Ctrl-Alt-F.
+
+o Version 1.0.19 (2015.10.15)
+    Note: The following message can be tested by pressing Alt-, (That's the 'Alt' and 'comma' keys on your keyboard)
+          In case the message below is not clear, you can consider that it says "Exclusive locking of the USB drive"
+  - *NEW* MSG_282 "Exclusive USB drive locking"
+    Note: The following messages will appear after a new Rufus update has been downloaded from the
+          Internet in case something is very wrong with its digital signature...
+  - *NEW* MSG_283 "Invalid signature"
+  - *NEW* MSG_284 "The downloaded executable is missing a digital signature."
+  - *NEW* MSG_285 "The downloaded executable is signed by '%s'.\nThis is not a signature we recognize and could "
+                  "indicate some form of malicious activity...\nAre you sure you want to run this file?"
+
+o Version 1.0.18 (2015.09.03)
+  - Changed MSG_081 "Unsupported ISO" -> "Unsupported image"
+  - Changed MSG_082 -> "This image is either non-bootable, or it uses a boot or compression method that is not supported by Rufus..."
+  - *NEW* MSG_269 "Preserve timestamps"
+    Note: You can use the Alt-T cheat mode to see this message. Also, if 'timestamp' doesn't really translate in your language,
+    "file dates preservation" is a good approximation of what this is about.
+  - *NEW* MSG_270 "USB debug"
+    Note: You can use the Alt-. cheat mode to see the message above
+  For an idea of what the 'checksums' in the 2 messages below are used for, see https://en.wikipedia.org/wiki/Md5sum:
+  - *NEW* MSG_271 "Computing image checksums: %0.1f%% completed"
+  - *NEW* MSG_272 "Compute the SHA1 and MD5 checksums for the selected image"
+  - *NEW* MSG_273 "Change the application language"
+    Note: You can see the message above by hovering on the language button
+  - *NEW* MSG_274 "ISOHybrid image detected"
+    Note: You can test this message and the one below by downloading and trying to write the latest menu_c32_test.iso (120 KB) from:
+    https://github.com/pbatard/rufus/raw/master/res/localization/menu_c32_test.iso
+	- *NEW* MSG_275 "The image you have selected is..." [TRANSLATORS: Please refer to the English section of 'rufus.loc' for the FULL message]
+	  For more info on the messages below, also see the comments in the English section of rufus.loc
+  - *NEW* MSG_276 "Write in %s mode (Recommended)"
+  - *NEW* MSG_277 "Write in %s mode"
+  - *NEW* MSG_278 "Boot type"
+  - *NEW* MSG_279 "Non bootable"
+  - *NEW* MSG_280 "Image selection"
+  - *NEW* MSG_281 "(Please select an image)"
+
+o Version 1.0.17 (2015.02.04)
+  - *NEW CONTROL* IDC_WINDOWS_INSTALL "Standard Windows installation" (Main dialog)
+  - *NEW CONTROL* IDC_WINDOWS_TO_GO "Windows To Go" (Main dialog)
+  Note: to see the 2 controls above displayed, you will need to load the "Windows To Go.iso" image from
+  https://github.com/pbatard/rufus/raw/master/res/localization/Windows%20To%20Go.iso (356 KB)
+  Also see the comment for IDC_WINDOWS_TO_GO in the English translation.
+  - *NEW* MSG_096 "The file system currently selected can not be used with this type of ISO (...)"
+  - *NEW* MSG_097 "'Windows To Go' can only be applied if the file system is NTFS."
+  - *NEW* MSG_098 "IMPORTANT: You are trying to install 'Windows To Go', but your target drive doesn't (...)"
+  - *NEW* MSG_116 "This image uses Grub %s but the application only includes the installation files for (...)"
+    Similar to MSG_114. Please see the comment from the English translation if you want to test this message.
+  - *NEW* MSG_190 "Incompatible drive detected"
+  - *NEW* MSG_191 "Write pass"
+  - *NEW* MSG_192 "Read pass"
+    See MSG_235 for where the 2 messages above are being used.
+  - *NEW* MSG_193 "Downloaded %s"
+  - *NEW* MSG_194 "Could not download %s"
+  - *NEW* MSG_195 "Using embedded version of %s file(s)"
+  - *NEW* MSG_196 "IMPORTANT: THIS DRIVE USES A NONSTANDARD SECTOR SIZE!! (...)"
+  - *NEW* MSG_197 "Nonstandard sector size detected"
+  - *NEW* MSG_198 "'Windows To Go' can only be installed on a GPT partitioned drive if it has (...)"
+  - *NEW* MSG_199 "Choose this if you plan to install Windows, to another disk, using (...)"
+  - *NEW* MSG_200 "Choose this if you want to run Windows directly from the selected device."
+  - Changed MSG_205 "Using ISO: %s" -> "Using image: %s"
+  - Changed MSG_210 "DONE" -> "READY".
+    This message appears in the new Info field that was added to Rufus 2.0 and reflects
+    when the application is ready to take an action from the user.
+  - Changed MSG_235 "Bad Blocks: PASS %d/%d - %0.2f%% (%d/%d/%d errors)" -> "Bad Blocks: %s %d/%d - %0.2f%% (%d/%d/%d errors)"
+    Basically "PASS" will be replaced by "Write pass" or "Read pass" from MSG_191/192 (printed in place of the '%s')
+  - Changed MSG_253 "Fixed disks detection" -> "Hard disk detection"
+  - *NEW* MSG_264 "Deleting directory '%s'"
+  - *NEW* MSG_265 "VMWare disk detection"
+  - *NEW* MSG_266 "Dual UEFI/BIOS mode"
+  - *NEW* MSG_267 "Applying Windows image: %0.1f%% completed"
+  - *NEW* MSG_268 "Applying Windows image..."
+
+o Version 1.0.16 (2015.02.03)
+  - Removed MSG_096 - MSG_098
+  Note: since this doesn't require translator involvement, I have applied the changes to existing translations.
+
+o Version 1.0.15 (2015.01.23)
+  - IDD_ISO_EXTRACT dialog and associated translations have been removed
+  Note: since this doesn't require translator involvement, I have applied the changes to existing translations.
+
+o Version 1.0.14 (2014.11.27)
+  - Updated translations for the new 2.0 UI font and layout.
+  Note: since this doesn't require translator involvement, I have applied the changes to existing translations.
+
+o Version 1.0.13 (2014.11.14)
+  - Changed MSG_104 "Syslinux v5.0 or later requires a '%s' file to be installed.\n"
+    "Because this file is more than 100 KB in size, and always present on Syslinux v5+ ISO images (...)"
+    -> "%s or later requires a '%s' file to be installed.\n"
+	  "Because this file is more than 100 KB in size, and always present on %s ISO images (...)"
+  Note: since this doesn't require translator involvement, I have applied the change to existing translations.
+
+o Version 1.0.12 (2014.05.19)
+  - *NEW* MSG_079 "The device is not ready."
+  - *NEW* MSG_189 "This ISO image is not compatible with the selected filesystem"
+  - *NEW* MSG_262 "ISO Support" (If you want to know what it's about, see comment in English translation)
+  - *NEW* MSG_263 "Use PROPER size units" (If you want to know what it's about, see comment from English translation)
+  - Changed MSG_165 "Click to select an ISO..." -> "Click to select an image..."
+
+o Version 1.0.11 (2014.03.29)
+  - Changed MSG_011 "%u bad block(s) found" -> "%d bad block(s) found"
+  Note: since this doesn't require translator involvement, I have applied the change to existing translations.
+
+o Version 1.0.10 (2014.02.09)
+  - *NEW* MSG_095 "DD Image"
+  - *NEW* MSG_261 "Writing image: %0.1f%% completed"
+  - *NEW* MSG_187 "Invalid image for selected boot option"
+  - *NEW* MSG_188 "The current image doesn't match the boot option selected..." (see rufus.loc for full text)
+  - Changed MSG_086 "No ISO image selected" -> "No image selected"
+  - Changed MSG_087 "Please click on the disc button to select a bootable ISO..." -> "Please click on the disc button to select a bootable image..." (see rufus.loc for full text)
+  - Changed MSG_088 "ISO too big" -> "Image is too big"
+  - Changed MSG_089 "This ISO image is too big for the selected target." -> "The image is too big for the selected target."
+  - Changed MSG_202 "Scanning ISO image..." -> "Scanning image..."
+  - Changed MSG_203 "Failed to scan ISO image" -> "Failed to scan image"
+
+o Version 1.0.9 (2014.01.31)
+  - *NEW* MSG_260 "NTFS compression"
+    Note: Since this is a cheat-mode message, I don't specially care if it gets translated for the next version
+
+o Version 1.0.8 (2014.01.21)
+  - Changed MSG_047 "%s (%c:)" -> "Multiple Volumes" (non-updated ones have been commented out)
+  - *NEW* MSG_093 "IMPORTANT: THIS DRIVE CONTAINS MULTIPLE PARTITIONS OR VOLUMES!!"
+  - *NEW* MSG_094 "Multiple partitions detected"
+  - *NEW* MSG_114 "This image uses Syslinux %s but this application only includes the installation files for Syslinux %s."
+  - *NEW* MSG_115 "Download required"
+  - Changed MSG_234: 'v%d' is replaced with '%s' (change already applied to existing translations)
+
+o Version 1.0.7 (2014.01.01)
+  - Added MSG_092 again
+  - Added English example for OK button in About box (IDOK)
+
+o Version 1.0.6 (2013.12.17)
+  - Removed IDD_MESSAGES (and the need for 'g IDD_MESSAGES')
+
+o Version 1.0.5 (2013.12.11)
+  - Removed MSG_092 to MSG_094
+
+o Version 1.0.4 (2013.12.02)
+  - MSG_033 -> MSG_031
+  - MSG_031 -> MSG_032
+  - MSG_032 -> MSG_033
+
+o Version 1.0.3 (2013.11.15)
+  - IDC_ENABLE_FIXED_DISKS "List non removable or unpartitioned USB disks" -> "List USB Hard Drives"
+  - MSG_170 "Enable detection for disks not normally detected by Rufus" -> "Enable the listing of USB Hard Drive enclosures"
+
+o Version 1.0.2 (2013.10.30)
+  - *NEW* MSG_110 "MS-DOS cannot boot from a drive using a 64 kilobyte Cluster size..."
+  - *NEW* MSG_111 "Incompatible Cluster size"
+  - *NEW* MSG_112 "Formatting a large UDF volumes can take a lot of time..."
+  - *NEW* MSG_113 "Large UDF volume"
+  - *NEW* MSG_220 "Formatting (%s) - estimated duration %d:%02d..."
+  - *NEW* MSG_207 "New Volume"
+
+o Version 1.0.1 (2013.10.28)
+  - MSG_061 "Please insert a media in drive." -> "Please insert a removable media in drive."
+  - MSG_071 "Unable to create formatting thread." -> "Unable to start thread."
+
+o Version 1.0.0 (2013.10.20)
+  - Initial version
