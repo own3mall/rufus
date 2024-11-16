@@ -45,6 +45,8 @@
 *.user
 *.opensdf
 *.o_manifest
+*.iobj
+*.ipdb
 .deps
 .libs
 Makefile
