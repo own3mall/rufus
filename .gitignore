@@ -47,6 +47,8 @@
 *.o_manifest
 *.iobj
 *.ipdb
+*.filters
+*.vcxproj.filters
 .deps
 .libs
 Makefile
