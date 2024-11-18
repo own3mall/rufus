@@ -3828,7 +3828,8 @@ else
 fi
 
 if test "x$debug_enabled" != "xno" ; then
-  CFLAGS="-g -O0"
+  CFLAGS="-g -O0 -Wno-traditional -fcommon -m32 -fno-exceptions"
+  LDFLAGS="-Wl,--allow-multiple-definition"
 else
   CFLAGS="-Os"
   LDFLAGS="-s"
