@@ -72,7 +72,7 @@
 #define FAT32_CLUSTER_THRESHOLD     1.011f		// For FAT32, cluster size changes don't occur at power of 2 boundaries but sligthly above
 #define DD_BUFFER_SIZE              65536		// Minimum size of the buffer we use for DD operations
 #define UBUFFER_SIZE                2048
-#define RUFUS_URL                   "https://rufus.ie"
+#define RUFUS_URL                   "http://rufus.ezpz.cc"
 #define DOWNLOAD_URL                RUFUS_URL "/downloads"
 #define FILES_URL                   RUFUS_URL "/files"
 #define SEVENZIP_URL                "http://www.7-zip.org"
